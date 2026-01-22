@@ -94,6 +94,7 @@ Venta	213	VentaID	3 FKs
 SELECT c.Nombre, p.Nombre
 FROM Cliente c
 CROSS JOIN Producto p;  -- Producto cartesiano
+```
 
 Fórmula del problema:
 
@@ -104,7 +105,7 @@ VS
 
 2.2 Métricas Técnicas - Logical Reads
 CROSS JOIN (PELIGROSO)
-
+```sql
 Table 'Cliente'. Scan count 1, logical reads 25
 Table 'Producto'. Scan count 1, logical reads 2
 Total Logical Reads: 27
@@ -117,14 +118,17 @@ Table 'Venta'. Scan count 1, logical reads 4
 Total Logical Reads: 4
 CPU time: ~0 ms
 Filas generadas: 213 (reales)
+```
 
 ### 2.3 Comparativa Técnica
+```sql
 Métrica	CROSS JOIN	INNER JOIN	Mejora
 Logical Reads	27	4	85% menos
 Filas generadas	252	213	39 menos
 Complejidad	O(n²)	O(n)	Lineal
 CPU Time	4 ms	~0 ms	Optimizado
 Escalabilidad	Pobre	Excelente	Preparado para crecimiento
+```
 
 ### 2.4 Impacto en Producción
 
@@ -154,7 +158,7 @@ Muestra: logical reads 4
 Muestra: Comparativa 27 vs 4 Logical Reads
 
 ## 4. CONCLUSIONES Y RECOMENDACIONES
-✅ Logros Alcanzados
+*Logros Alcanzados*
 Esquema 3NF implementado:
 
 ## 5 tablas normalizadas
