@@ -1,0 +1,33 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_reto
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "TuPasswordFuerte123!"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    restart: unless-stopped
+    # Sin healthcheck temporalmente para simplificar
+
+  ingesta:
+    build: ./app  # ¡IMPORTANTE! Apunta a la carpeta app
+    container_name: ingesta_app
+    depends_on:
+      - sqlserver  # Solo depende de que se inicie
+    volumes:
+      - ./app:/app  # Montar el código para desarrollo
+      - ./01_data:/01_data  # Montar datos
+    environment:
+      DB_HOST: sqlserver
+      DB_USER: sa
+      DB_PASSWORD: "TuPasswordFuerte123!"
+      DB_NAME: master
+    command: >
+      sh -c "
+      echo 'Esperando 60 segundos para que SQL Server esté listo...'
+      sleep 60
+      echo 'Iniciando aplicación...'
+      python main.py
+      "

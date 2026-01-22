@@ -1,0 +1,28 @@
+[project]
+name = "data-dev-test"
+version = "0.1.0"
+description = "Entorno de desarrollo para el Diplomado en Estrategias de Datos."
+package-mode = false
+authors = [
+    {name = "izainea",email = "cizaineam@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    # --- DEPENDENCIAS CLAVE DE ENTORNO Y CONECTIVIDAD ---
+    "jupyterlab (>=4.2.3,<5.0.0)", # NECESARIO para que 'poetry run jupyter-lab' funcione.
+    "sqlalchemy (>=2.0.31,<3.0.0)", # Para manejo general y abstracción de bases de datos.
+    "pyodbc (>=5.1.0,<6.0.0)", # Para conexión directa a MS SQL Server (Requiere configuración de driver ODBC en el Dockerfile).
+    
+    # --- DEPENDENCIAS DE DATA SCIENCE Y ML ---
+    "pandas (>=2.3.0,<3.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "numpy (>=2.3.0,<3.0.0)",
+    "scikit-learn (>=1.7.0,<2.0.0)",
+    "torch (>=2.7.1,<3.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
