@@ -2,8 +2,8 @@
 ## Reto SQL Architect & Tuner Protocol
 ### Diplomado en Gestión de Datos 2026
 
-**Estudiante:** [TU NOMBRE COMPLETO]  
-**Fecha:** [FECHA ACTUAL DD/MM/YYYY]  
+**Estudiante:** Laura Alejandra Sepulveda 
+**Fecha:** 23/01/2026 
 **Empresa:** LegacyRetail S.A.  
 **Rol:** Lead Data Engineer  
 
@@ -16,9 +16,9 @@ LegacyRetail S.A. enfrentaba colapso técnico por:
 2. **Caída de servidor:** `CROSS JOIN` mal implementado
 
 **Soluciones implementadas:**
-- ✅ **Normalización 3NF:** 5 tablas relacionales
-- ✅ **Optimización performance:** `INNER JOIN` vs `CROSS JOIN`
-- ✅ **Evidencias técnicas:** Logical Reads reducidos 85%
+- **Normalización 3NF:** 5 tablas relacionales
+- **Optimización performance:** `INNER JOIN` vs `CROSS JOIN`
+- **Evidencias técnicas:** Logical Reads reducidos 85%
 
 ---
 
@@ -79,10 +79,10 @@ Venta	213	VentaID	3 FKs
 
 
 **Beneficios:**
-- ✅ Texto no repetido
-- ✅ "Luisa Fernanda" normalizada (1 forma)
-- ✅ 4 FOREIGN KEYs para integridad
-- ✅ Solo IDs en tabla de hechos
+- Texto no repetido
+- "Luisa Fernanda" normalizada (1 forma)
+- 4 FOREIGN KEYs para integridad
+- Solo IDs en tabla de hechos
 
 ---
 
