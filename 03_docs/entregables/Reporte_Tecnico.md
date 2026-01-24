@@ -146,15 +146,15 @@ RESULTADO: 49,900,000 combinaciones INNECESARIAS
 Muestra: "luisa fernanda" normalizada a una sola forma
 
 ### 3.2 Logical Reads CROSS JOIN
-![Logical Reads CROSS JOIN](capturas/02_cross_join_reads.png)
+![Logical Reads CROSS JOIN](capturas/02_cross_join_reads.jpeg)
 Muestra: logical reads 25 y logical reads 2
 
 ### 3.3 Logical Reads INNER JOIN
-![Logical Reads INNER JOIN](capturas/03_inner_join_reads.png)
+![Logical Reads INNER JOIN](capturas/03_inner_join_reads.jpeg)
 Muestra: logical reads 4
 
 ### 3.4 Resumen Comparativo
-![Resumen Comparativo](capturas/04_resumen.png)
+![Resumen Comparativo](capturas/04_resumen.jpeg)
 Muestra: Comparativa 27 vs 4 Logical Reads
 
 ## 4. CONCLUSIONES Y RECOMENDACIONES
