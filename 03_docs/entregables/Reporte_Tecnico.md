@@ -32,33 +32,7 @@ CSV `raw_sales_dump.csv` (200 registros) con:
 
 ### 1.2 Diagrama Entidad-Relación
 
- Cliente          Producto          Sucursal
-┌────────┐       ┌────────┐       ┌────────┐
-│ClienteID│       │ProductoID│     │SucursalID│
-│Nombre   │       │Nombre    │     │Nombre    │
-│Email    │       │Precio    │     │Ciudad    │
-└────┬────┘       │CategoriaID│    └────┬────┘
-     │            └─────┬─────┘         │
-     │                  │               │
-     │            ┌─────┴───────────────┘
-     └────────────┤       Venta
-                  ├──────────────────┐
-                  │VentaID           │
-                  │Fecha             │
-                  │ClienteID  (FK)   │
-                  │ProductoID (FK)   │
-                  │SucursalID (FK)   │
-                  │Cantidad          │
-                  │Total             │
-                  └──────────────────┘
-                          │
-                          ▼
-                  ┌─────────────┐
-                  │  Categoria  │
-                  ├─────────────┤
-                  │CategoriaID  │
-                  │Nombre       │
-                  └─────────────┘
+![Diagrama Entidad-Relación – Esquema 3NF](capturas/ERD_3NF.png)
 
 
 ### 1.3 Resultados Normalización
